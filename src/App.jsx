@@ -9,11 +9,6 @@ import Progress from "./components/Progress";
 
 const IS_WEBGPU_AVAILABLE = !!navigator.gpu;
 const STICKY_SCROLL_THRESHOLD = 120;
-const EXAMPLES = [
-  "Solve the equation x^2 - 3x + 2 = 0",
-  "Lily is three times older than her son. In 15 years, she will be twice as old as him. How old is she now?",
-  "Write python code to compute the nth fibonacci number.",
-];
 
 function App() {
   // Create a reference to the worker object.
@@ -203,7 +198,7 @@ function App() {
         <div className="text-gray-400">
           
             
-            <p><b>SmolLM2-1.7B-Instruct WebGPU</b></p>
+            <p><b>WebGPU</b></p>
         
           
           {status !== "ready" && (
@@ -214,14 +209,14 @@ function App() {
               <br />
               You are about to load{" "}
               <a
-                href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct"
+                href="https://huggingface.co/onnx-community/SmolLM2-135M-Instruct-ONNX-GQA"
                 target="_blank"
                 rel="noreferrer"
                 className="underline"
               >
-                SmolLM2-1.7B-Instruct
+                SmolLM2-135M-Instruct-ONNX-GQA
               </a>
-              , a 1.7B parameter reasoning LLM optimized for in-browser
+              , a 135M parameter reasoning LLM optimized for in-browser
               inference. Everything runs entirely in your browser with{" "}
               <a
                 href="https://huggingface.co/docs/transformers.js"
