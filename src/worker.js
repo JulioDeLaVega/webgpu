@@ -29,8 +29,7 @@ async function check() {
  */
 class TextGenerationPipeline {
   // static model_id = "onnx-community/DeepSeek-R1-Distill-Qwen-1.5B-ONNX";
-  // static model_id = "HuggingFaceTB/SmolLM2-1.7B-Instruct"
-  static model_id = "onnx-community/SmolLM2-135M-Instruct-ONNX-GQA"
+  static model_id = "HuggingFaceTB/SmolLM2-1.7B-Instruct"
 
   static async getInstance(progress_callback = null) {
     this.tokenizer ??= AutoTokenizer.from_pretrained(this.model_id, {
@@ -38,6 +37,7 @@ class TextGenerationPipeline {
     });
 
     this.model ??= AutoModelForCausalLM.from_pretrained(this.model_id, {
+      // use the following line for SmolLM2-1.7B-Instruct
       dtype: "q4f16",
       device: "webgpu",
       progress_callback,

@@ -209,14 +209,14 @@ function App() {
               <br />
               You are about to load{" "}
               <a
-                href="https://huggingface.co/onnx-community/SmolLM2-135M-Instruct-ONNX-GQA"
+                href="https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct"
                 target="_blank"
                 rel="noreferrer"
                 className="underline"
               >
-                SmolLM2-135M-Instruct-ONNX-GQA
+               SmolLM2-1.7B-Instruct
               </a>
-              , a 135M parameter reasoning LLM optimized for in-browser
+              , a 1.7B parameter reasoning LLM optimized for in-browser
               inference. Everything runs entirely in your browser with{" "}
               <a
                 href="https://huggingface.co/docs/transformers.js"
