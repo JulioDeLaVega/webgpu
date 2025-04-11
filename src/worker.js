@@ -29,7 +29,8 @@ async function check() {
  */
 class TextGenerationPipeline {
   // static model_id = "onnx-community/DeepSeek-R1-Distill-Qwen-1.5B-ONNX";
-  static model_id = "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+  // static model_id = "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+  static model_id = "onnx-community/Llama-3.2-1B-Instruct-q4f16"
 
   static async getInstance(progress_callback = null) {
     this.tokenizer ??= AutoTokenizer.from_pretrained(this.model_id, {
